@@ -110,17 +110,55 @@
         height: 132px;
         left: 857px;
         top: 142px;
+        font-family: 'Open Sans';
         margin-top: 40px;
         margin-left: auto;
         margin-right: auto;
-    
-        font-family: 'Open Sans';
         font-style: normal;
         font-weight: 300;
         font-size: 52px;
         line-height: 1.27;    
         text-align: center;
         color: #E9E9E9;
+ }
+
+ .subtitle{
+        width: 246px;
+        height: 74px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 1.67;
+        text-align: center;
+        color: #E9E9E9;
+        font-family: 'Open Sans';
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+ }
+ .button{
+    width: 156px;
+    height: 45px;
+    background: #28A745;
+    border-radius: 5px;  
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center;
+        color: #FFFFFF;
+        margin-top: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        cursor: pointer;
+ }
+.button:hover{
+  background-color: rgba(40, 167, 49, 0.8);
+}
+ .svgBtn{
+   display: none;
  }
 
  @media screen and (min-width: 768px) {
@@ -132,7 +170,6 @@
      .wrapper{
         padding-top: 0px;
      }
-
      .list{
         padding: 0px;
      }
@@ -148,6 +185,23 @@
         width: 493px;
         height: 66px;
         font-size: 55px;
+     }
+     .subtitle{
+        width: 459px;
+        height: 37px;
+        font-size: 22px;
+        line-height: 1.67;
+        margin-top: 24px;
+     }
+     .button{
+        width: 165px;
+        height: 48px;
+        font-size: 18px;
+        line-height: 1.56;
+        margin-top: 32px;
+     }
+     .svgBtn{
+      display:inline-block;
      }
  }
 
