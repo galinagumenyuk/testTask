@@ -14,7 +14,7 @@
     padding: 40px 30px 50px 30px;
 }
 .subtitle{
-    font-style: normal;
+    font-family: 'Open Sans';
     font-weight: 400;
     font-size: 18px;
     line-height: 1.66;
@@ -22,10 +22,8 @@
 
 }
 .title{
-    width: 204px;
-    height: 144px;
     font-family: 'Open Sans';
-    font-style: normal;
+    width: 204px;
     font-weight: 300;
     font-size: 38px;
     line-height: 1.26;
@@ -33,9 +31,8 @@
     margin-top: 8px;
 }
 .text{
-    width: 260px;  
     font-family: 'Open Sans';
-    font-style: normal;
+    width: 260px;  
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;  
@@ -50,8 +47,7 @@
     border: 1px solid #FFFFFF;
     border-radius: 5px;
     background-color: transparent;
-    
-    font-style: normal;
+    font-family: 'Open Sans';
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;
@@ -84,7 +80,7 @@
         width: 167px;
         height: 50px;
         font-size: 18px;
-        line-height: 28px;
+        line-height: 1.56;
         }
         .text{
             width: 315px;
@@ -109,6 +105,8 @@
         .text{
             width: 606px;
         }
-
+        .title{
+            width: 541px;
+        }
   }
       

@@ -3,12 +3,14 @@ import "./App.css";
 
 import Header from "../src/components/header/Header.jsx";
 const About = lazy(() => import("../src/components/about/About.jsx"));
+const Cases = lazy(() => import("../src/cases/Cases.jsx"));
 
 function App() {
   return (
-    <Suspense fallback={<div>downloading... </div>}>
+    <Suspense fallback={<div>Loading... </div>}>
       <Header />
       <About />
+      <Cases />
     </Suspense>
   );
 }
