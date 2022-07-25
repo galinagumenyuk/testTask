@@ -6,7 +6,7 @@ import s from "./About.module.css";
 
 const About = () => { 
     return (
-        <div>
+        <div className={s.container}>
             <img src={require("../../images/home/people.jpg")} alt="people"
                 srcSet={require("../../images/home/people@2x.jpg")}
                 className={s.img} /> 

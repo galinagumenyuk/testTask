@@ -33,8 +33,7 @@
     margin-top: 8px;
 }
 .text{
-    width: 260px;
-    height: 205px;    
+    width: 260px;  
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -42,6 +41,7 @@
     line-height: 1.6;  
      color: #FFFFFF;
      margin-top: 24px;
+     margin-bottom: 24px;
 }
 .button{
     width: 158px;
@@ -61,3 +61,54 @@
     background-color: #FFFFFF;
     color: #28A745;
 }
+
+ @media screen and (min-width: 768px) {
+    .container{
+        display:flex;
+       justify-content: center;
+    }
+    .img{
+        width: 368px;
+        height: 589px;
+        margin: 0px;
+        object-fit: cover;
+        
+    }
+        .wrapper {
+            width: 400px;
+            height: 589px;
+            margin: 0px;
+            padding: 40px 32px 40px 32px;
+        }
+        .button{
+        width: 167px;
+        height: 50px;
+        font-size: 18px;
+        line-height: 28px;
+        }
+        .text{
+            width: 315px;
+        font-size: 18px;
+        line-height: 1.56;
+        }
+ }
+
+  @media screen and (min-width: 1360px) {
+    .img {
+            width: 670px;
+            height: 460px;
+            margin: 0px;
+            object-fit: cover;
+        }
+    .wrapper {
+        width: 690px;
+        height: 460px;
+        margin: 0px;
+        padding: 80px 64px 80px 20px;
+        }
+        .text{
+            width: 606px;
+        }
+
+  }
+      
