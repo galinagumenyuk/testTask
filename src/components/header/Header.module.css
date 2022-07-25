@@ -1,7 +1,9 @@
 .container {
     margin: 0 auto;
-    width: 480px;
+    width: 320px;
     height: 533px;
+    margin-left: auto;
+    margin-right: auto;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../images/home/showcase.jpg');
     background-size: cover;
 }
@@ -154,7 +156,7 @@
         display: block;
         cursor: pointer;
  }
-.button:hover{
+.button:hover, .button:focus{
   background-color: rgba(40, 167, 49, 0.8);
 }
  .svgBtn{
