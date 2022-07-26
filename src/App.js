@@ -3,7 +3,8 @@ import "./App.css";
 
 import Header from "../src/components/header/Header.jsx";
 const About = lazy(() => import("../src/components/about/About.jsx"));
-const Cases = lazy(() => import("../src/cases/Cases.jsx"));
+const Cases = lazy(() => import("./components/cases/Cases.jsx"));
+const Blog = lazy(() => import("./components/blog/Blog.jsx"));
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <About />
       <Cases />
+      <Blog />
     </Suspense>
   );
 }

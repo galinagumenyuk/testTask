@@ -23,7 +23,7 @@ max-width: calc(100vw);
 .btn{
   display: block;
   margin-left: auto;
-  margin-right: 5px;
+  margin-right: 20px;
 background-color: transparent;
 }
 .btn:hover{
