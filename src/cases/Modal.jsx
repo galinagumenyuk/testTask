@@ -27,7 +27,8 @@ export default function ModalWindow({ onClose}) {
     if (e.code === "Escape") {
     onClose();
     }
-  };
+    };
+    const handleClose = () => { onClose() };
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeydown);
@@ -37,7 +38,8 @@ export default function ModalWindow({ onClose}) {
     return (
         <div className={s.overlay} onClick={handleBackdropClick}>
             <div className={s.modal}>
-           <AliceCarousel mouseTracking items={items} />
+                <AliceCarousel mouseTracking items={items} />
+                <button type="button" className={s.btn}><img src={require("../images/gallery/close.png")} alt="close" onClick={handleClose}/></button>
         </div>
       </div>
     );
