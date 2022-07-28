@@ -128,9 +128,6 @@
     margin-bottom: 20px;
 }
 
-
-
-
  @media screen and (min-width: 768px) {
 .container {
         padding: 40px 32px 40px 32px;
@@ -174,6 +171,7 @@
         height: calc(100% - 14px);
     }
  }
+ 
   @media screen and (min-width: 1360px) {
     .container {
             padding: 80px 28px 80px 28px;

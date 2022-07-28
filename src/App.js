@@ -6,6 +6,7 @@ const About = lazy(() => import("../src/components/about/About.jsx"));
 const Cases = lazy(() => import("./components/cases/Cases.jsx"));
 const Blog = lazy(() => import("./components/blog/Blog.jsx"));
 const Team = lazy(() => import("./components/team/Team.jsx"));
+const Contact = lazy(() => import("./components/contact/Contact.jsx"));
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Cases />
       <Blog />
       <Team />
+      <Contact />
     </Suspense>
   );
 }
