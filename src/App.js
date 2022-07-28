@@ -1,7 +1,8 @@
 import { Suspense, lazy } from "react";
 import "./App.css";
 
-import Header from "../src/components/header/Header.jsx";
+import Header from "./components/header/Header";
+import Hero from "./components/header/Hero.jsx";
 const About = lazy(() => import("../src/components/about/About.jsx"));
 const Cases = lazy(() => import("./components/cases/Cases.jsx"));
 const Blog = lazy(() => import("./components/blog/Blog.jsx"));
@@ -12,13 +13,16 @@ const Footer = lazy(() => import("./components/footer/Footer.jsx"));
 function App() {
   return (
     <Suspense fallback={<div>Loading... </div>}>
-      <Header />
-      <About />
-      <Cases />
-      <Blog />
-      <Team />
-      <Contact />
-      <Footer />
+      <div className="positionWrapper">
+        <Header />
+        <Hero />
+        <About />
+        <Cases />
+        <Blog />
+        <Team />
+        <Contact />
+        <Footer />
+      </div>
     </Suspense>
   );
 }
