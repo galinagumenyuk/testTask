@@ -1,0 +1,49 @@
+.container{
+    padding: 40px 20px;
+}
+
+.title{
+    width: 147px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 1.26;
+    color: #333333;
+    margin-bottom: 32px;
+}
+.input{
+    box-sizing: border-box;
+    width: 280px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #F5F5F5;
+    margin-bottom: 32px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.44;
+    color: #808080;
+    padding-left: 8px;
+    padding-top: 9px;
+    padding-bottom: 7px;
+}
+.btn{
+    width: 280px;
+    height: 42px;
+    background: #28A745;
+    border-radius: 5px;
+    border: #28A745;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+
+    margin-top: 8px;
+}

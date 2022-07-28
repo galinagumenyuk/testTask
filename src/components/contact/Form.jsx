@@ -1,9 +1,10 @@
 import React from 'react';
 import { Formik } from 'formik';
+import s from "./Form.module.css";
 
 const Form = () => (
-  <div>
-    <h2>Request Callback</h2>
+    <div className={s.container}>
+    <h2 className={s.title}>Request Callback</h2>
     <Formik
       initialValues={{ name: '', email: '' }}
       validate={values => {
@@ -36,12 +37,13 @@ const Form = () => (
       }) => (
         <form onSubmit={handleSubmit}>
           <input
-            type="name"
-            name="name"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.name}
-            placeholder="Enter your name"
+                type="name"
+                name="name"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.name}
+                placeholder="Enter your name"
+                className={s.input}
           />
           {errors.name && touched.name && errors.name}
           <input
@@ -51,9 +53,10 @@ const Form = () => (
             onBlur={handleBlur}
             value={values.email}
             placeholder="Enter email*"
+            className={s.input}
           />
           {errors.email && touched.email && errors.email}
-          <button type="submit" disabled={isSubmitting}>
+            <button type="submit" disabled={isSubmitting} className={s.btn}>
             Send
           </button>
         </form>
