@@ -12,15 +12,16 @@ const Form = () => (
       validate={values => {
         const errors = {};
         if (!values.email) {
-            errors.email = <div className={s.error}>
-                <HandySvg
-                src={iconError}
-                    className={s.icon}
-                width="25"
-                height="25"
-                />
+          errors.email =
+            <span className={s.error}>
+              <HandySvg
+              src={iconError}
+              className={s.icon}
+              width="25"
+              height="25"
+              />
                 This is a required field 
-                </div>;
+            </span>;
         } else if (
           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
         ) {

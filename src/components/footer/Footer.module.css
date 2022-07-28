@@ -1,0 +1,53 @@
+.container{
+    width: 320px;
+    background: #333333;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+}
+.list{
+    display: flex;
+    justify-content:center;
+    margin-bottom: 8px;
+}
+.item + .item{
+margin-left: 25px;
+}
+.text{
+    width: 256px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+}
+.svgIcon{
+    fill: #FFFFFF;
+}
+.svgIcon:hover, .svgIcon:focus{
+    fill: #28a745;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+    .list{
+        margin-bottom: 6px;
+    }
+    .text {
+        width: 287px;
+        font-size: 18px;
+        line-height: 1.56;
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    .container {
+        width: 1360px;
+    }
+}
