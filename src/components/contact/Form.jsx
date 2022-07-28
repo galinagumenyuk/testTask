@@ -1,6 +1,8 @@
 import React from 'react';
 import { Formik } from 'formik';
+import {HandySvg} from 'handy-svg';
 import s from "./Form.module.css";
+import iconError from '../../images/form/worning.svg';
 
 const Form = () => (
     <div className={s.container}>
@@ -10,7 +12,15 @@ const Form = () => (
       validate={values => {
         const errors = {};
         if (!values.email) {
-          errors.email = 'Required';
+            errors.email = <div className={s.error}>
+                <HandySvg
+                src={iconError}
+                    className={s.icon}
+                width="25"
+                height="25"
+                />
+                This is a required field 
+                </div>;
         } else if (
           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
         ) {
@@ -35,8 +45,32 @@ const Form = () => (
         isSubmitting,
         /* and other goodies */
       }) => (
-        <form onSubmit={handleSubmit}>
-          <input
+        <form onSubmit={handleSubmit} name="contact" method="post">
+            <input type="hidden" name="form-name" value="contact" />
+            <p>
+                <input type="name"
+                name="name"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.name}
+                placeholder="Enter your name"
+                className={s.input} />
+            {errors.name && touched.name && errors.name}
+            </p>
+            <p>
+                <input type="email" name="email"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.email}
+                placeholder="Enter email*"
+                className={s.input} />
+            {errors.email && touched.email && errors.email}
+            </p>
+            <p>
+                <button type="submit" disabled={isSubmitting} className={s.btn}>Send</button>
+            </p>
+                    
+          {/* <input
                 type="name"
                 name="name"
                 onChange={handleChange}
@@ -58,7 +92,7 @@ const Form = () => (
           {errors.email && touched.email && errors.email}
             <button type="submit" disabled={isSubmitting} className={s.btn}>
             Send
-          </button>
+          </button> */}
         </form>
       )}
     </Formik>
