@@ -1,32 +1,57 @@
-.modal{max-width: calc(100vw);
-  max-height: calc(100vh - 50px);}
-
-
-.overlay{
-  position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1200;
+.modal {
+  max-width: calc(100vw);
+  max-height: calc(100vh - 50px);
 }
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1200;
+}
+
 .img {
-max-width: calc(100vw);
+  max-width: calc(100vw);
   display: block;
   margin-left: auto;
-    margin-right: auto;
+  margin-right: auto;
 }
-.btn{
+
+.btn {
   display: block;
   margin-left: auto;
   margin-right: 20px;
-background-color: transparent;
-}
-.btn:hover{
- background-color: azure;
+  background-color: transparent;
 }
 
+.btn:hover {
+  background-color: azure;
+}
+
+.image-gallery-icon {
+  opacity: 0;
+  color: rgb(221, 14, 14);
+  transition: all .3s ease-out;
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  z-index: 4;
+  filter: drop-shadow(0 2px 2px #1a1a1a)
+}
+
+@media(hover: hover)and (pointer: fine) {
+  .image-gallery-icon:hover {
+    opacity: 1;
+    color: #fff;
+  }
+}

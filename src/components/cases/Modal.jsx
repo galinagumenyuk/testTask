@@ -1,19 +1,34 @@
-import { useEffect} from "react";
-import s from "./Modal.module.css";
-import "react-alice-carousel/lib/alice-carousel.css";
+import { useEffect, useState} from "react";
 import React from 'react';
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
+import ImageGallery from 'react-image-gallery';
+import spinner from "../../images/gallery/loading.gif";
+import "./image-gallery.css";
+import s from "./Modal.module.css";
 
-const handleDragStart = (e) => e.preventDefault();
-
-const items = [
-  <img src={require("../../images/cases/cases1.jpg")} alt="img1"  onDragStart={handleDragStart} className={s.img}/>,
-    <img src={require("../../images/cases/cases2.jpg")} alt="img2" onDragStart={handleDragStart} className={s.img}/>,
-    <img src={require("../../images/cases/cases3.jpg")} alt="img3" onDragStart={handleDragStart} className={s.img}/>,
-    <img src={require("../../images/cases/cases4.jpg")} alt="img4" onDragStart={handleDragStart} className={s.img}/>,
-    <img src={require("../../images/cases/cases5.jpg")} alt="img5" onDragStart={handleDragStart} className={s.img}/>,
-    <img src={require("../../images/cases/cases6.jpg")} alt="img6"  onDragStart={handleDragStart} className={s.img}/>]
+const items = [{
+  original: require("../../images/cases/cases1.jpg"),
+  loading: "eager"
+  },
+  {
+    original: require("../../images/cases/cases2.jpg"),
+  loading: "eager"
+  },
+{
+    original: require("../../images/cases/cases3.jpg"),
+  loading: "eager"
+  },
+{
+    original: require("../../images/cases/cases4.jpg"),
+  loading: "eager"
+  },
+{
+    original: require("../../images/cases/cases5.jpg"),
+  loading: "eager"
+  },
+{
+    original: require("../../images/cases/cases6.jpg"),
+  loading: "eager"
+  }];
 
 export default function ModalWindow({ onClose}) {
 
@@ -35,11 +50,17 @@ export default function ModalWindow({ onClose}) {
     return () => {window.removeEventListener("keydown",handleKeydown)}
   })
 
+  const [load, setLoad] = useState(false)
+  const toggleLoad = () => {
+    setLoad((load) => !load);
+  };
+
     return (
         <div className={s.overlay} onClick={handleBackdropClick}>
-            <div className={s.modal}>
-                <AliceCarousel mouseTracking items={items} />
-                <button type="button" className={s.btn}><img src={require("../../images/gallery/close.png")} alt="close" onClick={handleClose}/></button>
+        <div className={s.modal}>
+          {!load && <img src={spinner} alt="loading..." />}
+          <ImageGallery items={items} lazyLoad={true} onImageLoad={toggleLoad} />
+          {/* <button type="button" className={s.btn}><img src={require("../../images/gallery/close.png")} alt="close" onClick={handleClose}/></button> */}
         </div>
       </div>
     );
