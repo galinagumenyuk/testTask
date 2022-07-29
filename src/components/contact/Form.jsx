@@ -25,7 +25,15 @@ const Form = () => (
         } else if (
           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
         ) {
-          errors.email = 'Invalid email address';
+          errors.email = <span className={s.error}>
+              <HandySvg
+              src={iconError}
+              className={s.icon}
+              width="25"
+              height="25"
+              />
+              Invalid email address
+            </span>; 
         }
         return errors;
       }}
