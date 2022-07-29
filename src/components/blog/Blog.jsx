@@ -3,7 +3,7 @@ import s from "./Blog.module.css"
 
 const Blog = () => { 
     return (
-        <div className={s.container}>
+        <div className={s.container} id="blog">
             
             <div className={s.wrapper}>
                 <h3 className={s.subtitle}>April 16 2020</h3>

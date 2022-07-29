@@ -3,7 +3,7 @@ import s from "./About.module.css";
 
 const About = () => { 
     return (
-        <div className={s.container}>
+        <div className={s.container} id="about">
             <img src={require("../../images/home/people.jpg")} alt="people"
                 srcSet={require("../../images/home/people@2x.jpg")}
                 className={s.img} /> 

@@ -4,7 +4,7 @@ import Form from "./Form";
 
 const Contact = () => { 
     return (
-        <div className={s.container}>
+        <div className={s.container} id="contact">
             <img src={require("../../images/home/contact.jpg")} alt="laptop" className={s.image}></img>
             <Form />
         </div>

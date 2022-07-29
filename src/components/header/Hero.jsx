@@ -4,7 +4,7 @@ import s from "./Hero.module.css";
 
 const Hero = () => { 
     return (
-        <div className={s.container}>
+        <div className={s.container} id="home">
             <h1 className={s.title}>The Sky Is The Limit</h1>
             <h2 className={s.subtitle}>We provide world class financial assistance</h2>
             <button type="button" className={s.button}> <SvgBtn className={s.svgBtn} /> Read More</button>

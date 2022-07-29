@@ -8,6 +8,17 @@
     z-index: 5;
     
 }
+.scrolled{
+position: fixed;
+    top: 0;
+    width: 320px;
+    height: 120px;
+    background-color: rgb(40, 39, 39);
+    opacity: 0.8;
+    padding: 20px 23px;
+    z-index: 5;
+}
+
 .logo {
     font-family: 'Open Sans';
     font-style: normal;
@@ -75,6 +86,13 @@
         justify-content: space-between;
         align-items: center;
     }
+    .scrolled{
+        width: 768px;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
    
     .list {
         padding: 0px;
@@ -90,6 +108,9 @@
 
  @media screen and (min-width: 1360px) {
     .container{
+        width: 1360px;
+    }
+    .scrolled{
         width: 1360px;
     }
     .items+.items {
