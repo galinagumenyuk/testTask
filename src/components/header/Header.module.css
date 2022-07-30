@@ -40,13 +40,17 @@
     align-items: center;
 }
 
-.logo:hover {
-    font-size: 44px;
+.wrapper:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.wrapper:hover .logo {
     color: #52b669;
 }
 
-.logo:hover .logoActive {
-    font-size: 44px;
+.wrapper:hover .logoActive {
     color: #FFFFFF;
 }
 
