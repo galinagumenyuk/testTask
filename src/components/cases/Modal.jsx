@@ -31,7 +31,7 @@ const items = [{
   }];
 
 export default function ModalWindow({ onClose, index}) {
-  console.log(index);
+
   const handleBackdropClick = (e) => {
     if (e.currentTarget === e.target) {
     onClose();
@@ -52,7 +52,6 @@ export default function ModalWindow({ onClose, index}) {
 
   const [load, setLoad] = useState(false)
   
-
     return (
         <div className={s.overlay} onClick={handleBackdropClick}>
         <div className={s.modal}>
