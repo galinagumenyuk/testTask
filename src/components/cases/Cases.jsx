@@ -4,7 +4,7 @@ import s from "./Cases.module.css"
 
 
 const items = [
-    <img src={require("../../images/cases/cases1.jpg")} alt="img1"  className={s.img} />,
+    <img src={require("../../images/cases/cases1.jpg")} alt="img1"  className={s.img}  />,
     <img src={require("../../images/cases/cases2.jpg")} alt="img2" className={s.img} />,
     <img src={require("../../images/cases/cases3.jpg")} alt="img3" className={s.img} />,
     <img src={require("../../images/cases/cases4.jpg")} alt="img4" className={s.img} />,
@@ -13,8 +13,11 @@ const items = [
 
 const Cases = () => {
     const [showModal, setShowModal] = useState(false);
-    const toggleModal = () => {
-    setShowModal((showModal) => !showModal);
+    const [index, setIndex] = useState(null)
+
+    const toggleModal = (index) => {
+        setShowModal((showModal) => !showModal);
+        setIndex(index)
   };
 
     return (
@@ -22,13 +25,13 @@ const Cases = () => {
             <h3 className={s.subtitle}>This is what we do</h3>
             <h2 className={s.title}>Business Cases</h2>
             <p className={s.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, sapiente!</p>
-            <ul className={s.list} onClick={toggleModal}>
+            <ul className={s.list} >
                     {items.map((item) => (
-                        <li key={items.indexOf(item)} >{item}</li>
+                        <li key={items.indexOf(item)}  onClick={()=>toggleModal(items.indexOf(item))}>{item}</li>
                     ))}
             </ul>
             {showModal && (
-        <Modal onClose={toggleModal} />
+                <Modal onClose={toggleModal} index={index} />
       )} 
         </div>
     )

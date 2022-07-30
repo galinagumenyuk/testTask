@@ -30,8 +30,8 @@ const items = [{
   loading: "eager"
   }];
 
-export default function ModalWindow({ onClose}) {
-
+export default function ModalWindow({ onClose, index}) {
+  console.log(index);
   const handleBackdropClick = (e) => {
     if (e.currentTarget === e.target) {
     onClose();
@@ -51,16 +51,20 @@ export default function ModalWindow({ onClose}) {
   })
 
   const [load, setLoad] = useState(false)
-  const toggleLoad = () => {
-    setLoad((load) => !load);
-  };
+  
 
     return (
         <div className={s.overlay} onClick={handleBackdropClick}>
         <div className={s.modal}>
           {!load && <img src={spinner} alt="loading..." />}
-          <ImageGallery items={items} lazyLoad={true} onImageLoad={toggleLoad} />
-          {/* <button type="button" className={s.btn}><img src={require("../../images/gallery/close.png")} alt="close" onClick={handleClose}/></button> */}
+          <ImageGallery
+            items={items}
+            lazyLoad={true}
+            showFullscreenButton={false}
+            showPlayButton={false}
+            startIndex={index}
+            onImageLoad={() => { setLoad(true) }} />
+          <button type="button" className={s.btn}><img src={require("../../images/gallery/close.png")} alt="close" onClick={handleClose}/></button>
         </div>
       </div>
     );
