@@ -1,19 +1,22 @@
-.container{
+.container {
     width: 320px;
     background: #333333;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 30px;
 }
-.list{
+
+.list {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     margin-bottom: 8px;
 }
-.item + .item{
-margin-left: 25px;
+
+.item+.item {
+    margin-left: 25px;
 }
-.text{
+
+.text {
     width: 256px;
     font-family: 'Open Sans';
     font-style: normal;
@@ -25,10 +28,16 @@ margin-left: 25px;
     margin-left: auto;
     margin-right: auto;
 }
-.svgIcon{
+
+.svgIcon {
     fill: #FFFFFF;
+    -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
-.svgIcon:hover, .svgIcon:focus{
+
+.svgIcon:hover,
+.svgIcon:focus {
     fill: #28a745;
 }
 
@@ -36,9 +45,11 @@ margin-left: 25px;
     .container {
         width: 768px;
     }
-    .list{
+
+    .list {
         margin-bottom: 6px;
     }
+
     .text {
         width: 287px;
         font-size: 18px;

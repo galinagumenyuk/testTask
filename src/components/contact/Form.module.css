@@ -1,8 +1,8 @@
-.container{
+.container {
     padding: 40px 20px;
 }
 
-.title{
+.title {
     width: 147px;
     font-family: 'Open Sans';
     font-style: normal;
@@ -12,7 +12,8 @@
     color: #333333;
     margin-bottom: 32px;
 }
-.input{
+
+.input {
     box-sizing: border-box;
     width: 280px;
     height: 40px;
@@ -30,7 +31,8 @@
     padding-top: 9px;
     padding-bottom: 7px;
 }
-.btn{
+
+.btn {
     width: 280px;
     height: 42px;
     background: #28A745;
@@ -46,12 +48,16 @@
     color: #FFFFFF;
 
     margin-top: 8px;
+
+    -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn:hover{
-background: rgb(40, 167, 69, 0.8);
+.btn:hover {
+    background: rgb(40, 167, 69, 0.8);
 }
-.error{
+
+.error {
     color: red;
     display: flex;
     align-items: center;
@@ -63,16 +69,19 @@ background: rgb(40, 167, 69, 0.8);
     .container {
         padding: 40px 32px;
     }
-    .title{
+
+    .title {
         width: 305px;
     }
+
     .input {
-       width: 324px;
+        width: 324px;
         font-size: 18px;
         line-height: 1.28;
         padding-top: 8px;
         padding-bottom: 8px;
     }
+
     .btn {
         width: 324px;
         font-size: 18px;
@@ -84,9 +93,10 @@ background: rgb(40, 167, 69, 0.8);
     .container {
         padding: 80px 28px 80px 20px;
     }
+
     .input {
         width: 620px;
-       
+
         line-height: 1.56;
         padding-top: 10px;
         padding-bottom: 1px;
