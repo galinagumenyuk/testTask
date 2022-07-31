@@ -1,10 +1,21 @@
-import react from "react";
 import s from "./Team.module.css";
 import {HandySvg} from 'handy-svg';
 import iconLinkedin from '../../images/svg/linked.svg';
 import iconFB from "../../images/svg/facebook.svg";
 import iconYoutube from "../../images/svg/youtube.svg";
 import iconTw from "../../images/svg/tw.svg";
+import person1JPG from "../../images/team/person1.jpg";
+import person1JPGRetina from "../../images/team/person1@2x.jpg";
+import person1WEBP from "../../images/team/person1.webp";
+import person1WEBPRetina from "../../images/team/person1@2x.webp";
+import person2JPG from "../../images/team/person2.jpg";
+import person2JPGRetina from "../../images/team/person2@2x.jpg";
+import person2WEBP from "../../images/team/person2.webp";
+import person2WEBPRetina from "../../images/team/person2@2x.webp";
+import person3JPG from "../../images/team/person3.jpg";
+import person3JPGRetina from "../../images/team/person3@2x.jpg";
+import person3WEBP from "../../images/team/person3.webp";
+import person3WEBPRetina from "../../images/team/person3@2x.webp";
 
 const Team = () => {
     return (
@@ -15,7 +26,11 @@ const Team = () => {
             <ul className={s.wrapper}>
                 <li>
                     <div className={s.imgWrapper}>
-                        <img src={require("../../images/team/person1.jpg")} alt="person" className={s.img}></img>
+                        <img
+                        src={person1WEBP}
+                        srcSet={`${person1WEBPRetina} 2x, ${person1JPG}, ${person1JPGRetina} 2x`}
+                            alt="person1"
+                        className={s.img}/>
                         <div className={s.overlay}>
                             <ul className={s.overlayText}>
                                 <li><a href="#.">
@@ -57,8 +72,12 @@ const Team = () => {
                     <p className={s.label}>President</p>
                 </li>
                 <li>
-                  <div className={s.imgWrapper}>
-                        <img src={require("../../images/team/person2.jpg")} alt="person" className={s.img}></img>
+                    <div className={s.imgWrapper}>
+                       <img
+                        src={person2WEBP}
+                        srcSet={`${person2WEBPRetina} 2x, ${person2JPG}, ${person2JPGRetina} 2x`}
+                        alt="person2"
+                        className={s.img}/>
                         <div className={s.overlay}>
                             <ul className={s.overlayText}>
                                 <li><a href="#.">
@@ -101,7 +120,11 @@ const Team = () => {
                 </li>
                 <li>
                     <div className={s.imgWrapper}>
-                        <img src={require("../../images/team/person3.jpg")} alt="person" className={s.img}></img>
+                       <img
+                        src={person3WEBP}
+                        srcSet={`${person3WEBPRetina} 2x, ${person3JPG}, ${person3JPGRetina} 2x`}
+                        alt="person3"
+                        className={s.img}/>
                         <div className={s.overlay}>
                             <ul className={s.overlayText}>
                                 <li><a href="#.">
