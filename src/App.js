@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import Favicon from "react-favicon";
 import "./App.css";
 
 import Header from "./components/header/Header";
@@ -14,6 +15,7 @@ function App() {
   return (
     <Suspense fallback={<div>Loading... </div>}>
       <div className="positionWrapper">
+        <Favicon url={"../favicon.ico"} />
         <Header />
         <Hero />
         <About />
