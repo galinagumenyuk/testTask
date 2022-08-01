@@ -15,7 +15,7 @@ function App() {
   return (
     <Suspense fallback={<div>Loading... </div>}>
       <div className="positionWrapper">
-        <Favicon url={"../favicon.ico"} />
+        <Favicon url="../public/favicon.ico" />
         <Header />
         <Hero />
         <About />
